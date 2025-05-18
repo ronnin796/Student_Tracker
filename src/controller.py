@@ -7,6 +7,7 @@ class Controller:
     def __init__(self):
         self.model = Student_Model()
     def run(self):
+        print("!!!!!NOTE PLZ import students first or the Previous records will get overwritten!!!!!")
         while True:
             ch = main_menu()
             match ch:
@@ -16,16 +17,21 @@ class Controller:
                         self.model.add_students(student)
                         print("Student added successfully!")
                 case '2':
+                        if not self.model.students:
+                             print("Load the student datas or add student data first: \n")
+                        else:
+                             self.model.show_all_students()
+                case '3':
                     name = search_student()
                     self.model.show_student_details(name)
-                case '3':
+                case '4':
                     self.model.save()
                     print("Students saved to file successfully!")
-                case '4':
+                case '5':
                     self.model.load()
                     print("Loaded students from file successfully!")    
                     
-                case '5':
+                case '6':
                     print("Exiting...")
                     break
                 

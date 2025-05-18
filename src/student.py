@@ -1,3 +1,4 @@
+from collections import Counter
 class Student:
     def __init__(self,name,roll_no,marks):
         self.name=name
@@ -9,5 +10,6 @@ class Student:
         all_result=list(self.marks.values())
         return sum(all_result)/len(all_result)
     def calculate_percentage(self):
-        return self.calculate_average_marks()/50*100    
+        value_count = len(self.marks)
+        return self.calculate_average_marks()/(50*value_count)*100    
 
