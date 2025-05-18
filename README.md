@@ -7,9 +7,6 @@ Just a basic student tracker CLI app for practise .
 - Search Students using name
 - Save and Load from CSV file
 
-## 📸 Screenshots
-
-![Screenshot](path/to/screenshot.png)
 
 ## 🛠️ Tech Stack
 
